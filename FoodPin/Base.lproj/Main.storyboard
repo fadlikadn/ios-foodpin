@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2dK-q4-eUd">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,22 +15,25 @@
             <objects>
                 <tableViewController id="2dK-q4-eUd" customClass="RestaurantTableViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="S67-aR-Du1">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="4hp-xE-8ly" customClass="RestaurantTableViewCell" customModule="FoodPin" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="667" height="80"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="300" id="4hp-xE-8ly" customClass="RestaurantTableViewCell" customModule="FoodPin" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4hp-xE-8ly" id="aWi-Zk-f9I">
-                                    <rect key="frame" x="0.0" y="0.0" width="667" height="79"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" tableViewCell="4hp-xE-8ly" id="aWi-Zk-f9I">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U1p-IF-GLN">
-                                            <rect key="frame" x="14" y="10" width="645" height="60"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xSB-Qq-jIA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleAspectFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U1p-IF-GLN">
+                                            <rect key="frame" x="14" y="10" width="353" height="280"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fgL-CK-faj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fgL-CK-faj">
+                                                    <rect key="frame" x="0.0" y="110" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="CtN-iJ-xo7"/>
                                                         <constraint firstAttribute="width" constant="60" id="dKh-GS-0b2"/>
@@ -41,8 +44,8 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="QBH-2e-Se1">
-                                                    <rect key="frame" x="70" y="0.0" width="575" height="55.5"/>
+                                                <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="QBH-2e-Se1">
+                                                    <rect key="frame" x="70" y="112.5" width="283" height="55.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kh7-0t-7Wf">
                                                             <rect key="frame" x="0.0" y="0.0" width="47" height="20.5"/>
@@ -69,12 +72,17 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="U1p-IF-GLN" secondAttribute="bottom" constant="1.5" id="0nZ-ap-JLP"/>
+                                        <constraint firstItem="xSB-Qq-jIA" firstAttribute="leading" secondItem="aWi-Zk-f9I" secondAttribute="leading" id="2gC-TK-09R"/>
                                         <constraint firstItem="U1p-IF-GLN" firstAttribute="top" secondItem="aWi-Zk-f9I" secondAttribute="topMargin" constant="2" id="LCt-pU-Q93"/>
+                                        <constraint firstAttribute="trailing" secondItem="xSB-Qq-jIA" secondAttribute="trailing" id="YT5-kz-OIm"/>
+                                        <constraint firstAttribute="bottom" secondItem="xSB-Qq-jIA" secondAttribute="bottom" id="a9Z-aE-5ab"/>
+                                        <constraint firstItem="xSB-Qq-jIA" firstAttribute="top" secondItem="aWi-Zk-f9I" secondAttribute="top" id="bZA-BK-cXy"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="U1p-IF-GLN" secondAttribute="trailing" id="uFd-gD-GYo"/>
                                         <constraint firstItem="U1p-IF-GLN" firstAttribute="leading" secondItem="aWi-Zk-f9I" secondAttribute="leadingMargin" constant="6" id="vSF-9e-1Uc"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="backgroundImageView" destination="xSB-Qq-jIA" id="eWP-vc-17K"/>
                                     <outlet property="locationLabel" destination="9N4-qM-gC8" id="y0f-HY-Wjv"/>
                                     <outlet property="nameLabel" destination="Kh7-0t-7Wf" id="hTr-FV-D03"/>
                                     <outlet property="thumbnailImageView" destination="fgL-CK-faj" id="hWy-tE-QEc"/>
@@ -90,7 +98,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4Z-Zx-N40" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26.399999999999999" y="139.880059970015"/>
+            <point key="canvasLocation" x="-26.53673163418291" y="138.40000000000001"/>
         </scene>
     </scenes>
 </document>

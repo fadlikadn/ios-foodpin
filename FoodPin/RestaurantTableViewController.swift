@@ -60,6 +60,8 @@ class RestaurantTableViewController: UITableViewController {
         cell.thumbnailImageView.image = UIImage(named: restaurantImages[indexPath.row])
         cell.thumbnailImageView.layer.cornerRadius = 30.0
         cell.thumbnailImageView.clipsToBounds = true
+        
+        cell.backgroundImageView.image = UIImage(named: restaurantImages[indexPath.row])
 
         return cell
     }
