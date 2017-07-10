@@ -12,6 +12,7 @@
 		01791CF61F131F3200DF9ED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01791CF51F131F3200DF9ED9 /* Assets.xcassets */; };
 		01791CF91F131F3200DF9ED9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01791CF71F131F3200DF9ED9 /* LaunchScreen.storyboard */; };
 		01791D011F13207C00DF9ED9 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01791D001F13207C00DF9ED9 /* RestaurantTableViewController.swift */; };
+		01791D031F1326EC00DF9ED9 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01791D021F1326EC00DF9ED9 /* RestaurantTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		01791CF81F131F3200DF9ED9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01791CFA1F131F3200DF9ED9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01791D001F13207C00DF9ED9 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
+		01791D021F1326EC00DF9ED9 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				01791CEE1F131F3200DF9ED9 /* AppDelegate.swift */,
 				01791D001F13207C00DF9ED9 /* RestaurantTableViewController.swift */,
+				01791D021F1326EC00DF9ED9 /* RestaurantTableViewCell.swift */,
 				01791CF21F131F3200DF9ED9 /* Main.storyboard */,
 				01791CF51F131F3200DF9ED9 /* Assets.xcassets */,
 				01791CF71F131F3200DF9ED9 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01791D011F13207C00DF9ED9 /* RestaurantTableViewController.swift in Sources */,
+				01791D031F1326EC00DF9ED9 /* RestaurantTableViewCell.swift in Sources */,
 				01791CEF1F131F3200DF9ED9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
