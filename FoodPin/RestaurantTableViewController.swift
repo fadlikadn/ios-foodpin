@@ -18,7 +18,8 @@ class RestaurantTableViewController: UITableViewController {
     
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
     
-
+    var restaurantIsVisited = Array(repeating: false, count: 21)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -64,6 +65,12 @@ class RestaurantTableViewController: UITableViewController {
 //        cell.backgroundImageView.image = UIImage(named: restaurantImages[indexPath.row])
 //        cell.backgroundImageView.tintColor = UIColor(red: 8, green: 6, blue: 23, alpha: 1.0)
 
+        if restaurantIsVisited[indexPath.row] {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
+        
         return cell
     }
     
@@ -82,14 +89,27 @@ class RestaurantTableViewController: UITableViewController {
         let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
         optionMenu.addAction(callAction)
         
-        // Check-in action
-        let checkInAction = UIAlertAction(title: "Check in", style: .default, handler: {
-            (action:UIAlertAction!) -> Void in
-            
-            let cell = tableView.cellForRow(at: indexPath)
-            cell?.accessoryType = .checkmark
-        })
-        optionMenu.addAction(checkInAction)
+        if(!self.restaurantIsVisited[indexPath.row]) {
+            // Check-in action
+            let checkInAction = UIAlertAction(title: "Check in", style: .default, handler: {
+                (action:UIAlertAction!) -> Void in
+                
+                let cell = tableView.cellForRow(at: indexPath)
+                cell?.accessoryType = .checkmark
+                self.restaurantIsVisited[indexPath.row] = true
+            })
+            optionMenu.addAction(checkInAction)
+        } else {
+            // Undo Check-in action
+            let undoCheckInAction = UIAlertAction(title: "Undo Check in", style: .default, handler: {
+                (action:UIAlertAction!) -> Void in
+                
+                let cell = tableView.cellForRow(at: indexPath)
+                cell?.accessoryType = .none
+                self.restaurantIsVisited[indexPath.row] = false
+            })
+            optionMenu.addAction(undoCheckInAction)
+        }
         
         // Add cancel actions to the menu
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
