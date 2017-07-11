@@ -74,6 +74,8 @@ class RestaurantTableViewController: UITableViewController {
         return cell
     }
     
+    // Disable as app no need to display the action sheet
+    /*
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Create an option menu as an action sheet
         let optionMenu  = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: UIAlertControllerStyle.actionSheet)
@@ -119,7 +121,7 @@ class RestaurantTableViewController: UITableViewController {
         present(optionMenu, animated: true, completion: nil)
         
         tableView.deselectRow(at: indexPath, animated: false)
-    }
+    }*/
 
     /*
     // Override to support conditional editing of the table view.
