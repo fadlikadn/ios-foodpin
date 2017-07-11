@@ -134,6 +134,12 @@ class RestaurantTableViewController: UITableViewController {
         let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Share", handler: {(action, indexPath) -> Void in
             
             let defaultText = "Just checking in at " + self.restaurantNames[indexPath.row]
+            
+            if let imageToShare = UIImage(named: self.restaurantImages[indexPath.row]) {
+                let activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+                self.present(activityController, animated: true, completion: nil)
+            }
+            
             let activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
             self.present(activityController, animated: true, completion: nil)
         })
@@ -151,6 +157,9 @@ class RestaurantTableViewController: UITableViewController {
             self.tableView.deleteRows(at: [indexPath], with: .fade)
             
         })
+        
+        shareAction.backgroundColor = UIColor(red: 48.0/255.0, green: 173.0/255.0, blue: 99.0/255.0, alpha: 1.0)
+        deleteAction.backgroundColor = UIColor(red: 202.0/255.0, green: 202.0/255.0, blue: 203.0/255.0, alpha: 1.0)
         
         return [deleteAction, shareAction]
     }
