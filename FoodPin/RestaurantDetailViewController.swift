@@ -8,12 +8,13 @@
 
 import UIKit
 
-class RestaurantDetailViewController: UIViewController {
+class RestaurantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var restaurantImageView:UIImageView!
     @IBOutlet var restaurantNameView:UILabel!
     @IBOutlet var restaurantLocationView:UILabel!
     @IBOutlet var restaurantTypeView:UILabel!
+    @IBOutlet var tableView:UITableView!
     
 //    var restaurantImage = ""
 //    var restaurantName = ""
@@ -23,21 +24,57 @@ class RestaurantDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = restaurant.name
 
         // Do any additional setup after loading the view.
 //        restaurantImageView.image = UIImage(named: restaurantImage)
         restaurantImageView.image = UIImage(named: restaurant.image)
 //        restaurantNameView.text = restaurantName
-        restaurantNameView.text = restaurant.name
+//        restaurantNameView.text = restaurant.name
 //        restaurantLocationView.text = restaurantLocation
-        restaurantLocationView.text = restaurant.location
+//        restaurantLocationView.text = restaurant.location
 //        restaurantTypeView.text = restaurantType
-        restaurantTypeView.text = restaurant.type
+//        restaurantTypeView.text = restaurant.type
+        
+        tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 1)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RestaurantDetailTableViewCell
+        cell.backgroundColor = UIColor.clear
+        
+        // Configure the cell...
+        switch indexPath.row {
+        case 0:
+            cell.fieldLabel.text = "Name"
+            cell.valueLabel.text = restaurant.name
+        case 1:
+            cell.fieldLabel.text = "Type"
+            cell.valueLabel.text = restaurant.type
+        case 2:
+            cell.fieldLabel.text = "Location"
+            cell.valueLabel.text = restaurant.location
+        case 3:
+            cell.fieldLabel.text = "Been here"
+            cell.valueLabel.text = (restaurant.isVisited) ? "Yes, I've been here before" : "No"
+        default:
+            cell.fieldLabel.text = ""
+            cell.valueLabel.text = ""
+        }
+        
+        return cell
     }
     
 
