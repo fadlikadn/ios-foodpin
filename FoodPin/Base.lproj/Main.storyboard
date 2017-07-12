@@ -100,9 +100,12 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TQc-XO-srm" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HKP-be-sQC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HKP-be-sQC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="17"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
