@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" tableViewCell="4hp-xE-8ly" id="aWi-Zk-f9I">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleAspectFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U1p-IF-GLN">
@@ -142,7 +142,7 @@
                                         <rect key="frame" x="0.0" y="228" width="414" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lST-bp-PLk" id="5Nw-1b-xAQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="35.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAQ-yi-eiS">
@@ -216,10 +216,10 @@
             </objects>
             <point key="canvasLocation" x="1728.8" y="138.0809595202399"/>
         </scene>
-        <!--View Controller-->
+        <!--Review View Controller-->
         <scene sceneID="Awq-Vg-d6k">
             <objects>
-                <viewController id="dyL-cg-8BY" sceneMemberID="viewController">
+                <viewController id="dyL-cg-8BY" customClass="ReviewViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P8v-Vt-3KN"/>
                         <viewControllerLayoutGuide type="bottom" id="bOP-zE-JBw"/>
@@ -278,9 +278,21 @@
                                             <constraint firstAttribute="width" constant="150" id="aSE-8Q-CBv"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9j-f6-YqR">
+                                        <rect key="frame" x="245" y="0.0" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="SnZ-qK-gBq"/>
+                                            <constraint firstAttribute="height" constant="28" id="lLy-y4-GX9"/>
+                                        </constraints>
+                                        <state key="normal" image="cross"/>
+                                        <connections>
+                                            <segue destination="8e5-U5-EOo" kind="unwind" unwindAction="closeWithSegue:" id="MDU-rv-QVZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="G9j-f6-YqR" firstAttribute="top" secondItem="QZi-uY-uPl" secondAttribute="top" constant="-13" id="A76-ex-8dR"/>
                                     <constraint firstAttribute="bottom" secondItem="YbO-RL-tWd" secondAttribute="bottom" constant="10" id="JPO-wV-d4t"/>
                                     <constraint firstItem="b7A-m1-8Mf" firstAttribute="top" secondItem="sUv-5b-H5W" secondAttribute="bottom" constant="8" id="TmT-RD-Nl8"/>
                                     <constraint firstItem="b7A-m1-8Mf" firstAttribute="leading" secondItem="QZi-uY-uPl" secondAttribute="leading" constant="15" id="X8T-ZI-R5S"/>
@@ -289,6 +301,7 @@
                                     <constraint firstAttribute="trailing" secondItem="sUv-5b-H5W" secondAttribute="trailing" id="mkX-kp-GoO"/>
                                     <constraint firstAttribute="trailing" secondItem="b7A-m1-8Mf" secondAttribute="trailing" constant="15" id="p4H-G7-l4u"/>
                                     <constraint firstAttribute="trailing" secondItem="YbO-RL-tWd" secondAttribute="trailing" constant="8" id="svt-8y-4cP"/>
+                                    <constraint firstAttribute="trailing" secondItem="G9j-f6-YqR" secondAttribute="trailing" constant="-12" id="tnb-mo-do2"/>
                                     <constraint firstItem="YbO-RL-tWd" firstAttribute="top" secondItem="b7A-m1-8Mf" secondAttribute="bottom" constant="10" id="yK9-3c-YmU"/>
                                     <constraint firstItem="sUv-5b-H5W" firstAttribute="leading" secondItem="QZi-uY-uPl" secondAttribute="leading" id="yY0-Oa-qSv"/>
                                 </constraints>
@@ -307,8 +320,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="QZi-uY-uPl" secondAttribute="trailing" constant="50" id="wAD-Zz-LjB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="yRi-FJ-LU0" id="YfF-8H-tmK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJT-fa-IX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8e5-U5-EOo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2552.8000000000002" y="136.28185907046478"/>
         </scene>
@@ -317,5 +334,6 @@
         <image name="barrafina" width="426" height="426"/>
         <image name="cafeloisl" width="426" height="426"/>
         <image name="check" width="28" height="28"/>
+        <image name="cross" width="24" height="24"/>
     </resources>
 </document>
