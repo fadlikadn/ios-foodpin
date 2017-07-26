@@ -256,6 +256,9 @@
                                                 <state key="normal" title="Absolutely love it!.">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="8e5-U5-EOo" kind="unwind" identifier="great" unwindAction="ratingButtonTappedWithSegue:" id="eNk-Vs-DoQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB6-Js-Uhu">
                                                 <rect key="frame" x="0.0" y="35" width="150" height="30.000000000000057"/>
@@ -264,6 +267,9 @@
                                                 <state key="normal" title="Good">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="8e5-U5-EOo" kind="unwind" identifier="good" unwindAction="ratingButtonTappedWithSegue:" id="9WB-fx-20J"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20X-st-xkM">
                                                 <rect key="frame" x="0.0" y="70.000000000000057" width="150" height="30"/>
@@ -272,6 +278,9 @@
                                                 <state key="normal" title="I don't like it">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="8e5-U5-EOo" kind="unwind" identifier="dislike" unwindAction="ratingButtonTappedWithSegue:" id="lg1-6k-led"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -322,6 +331,8 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="yRi-FJ-LU0" id="YfF-8H-tmK"/>
+                        <outlet property="containerView" destination="QZi-uY-uPl" id="fAn-QS-18p"/>
+                        <outlet property="restaurantImageView" destination="sUv-5b-H5W" id="ru3-oc-EyJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJT-fa-IX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
