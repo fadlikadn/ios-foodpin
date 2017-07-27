@@ -19,6 +19,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         
         mapView.delegate = self
+        // Show traffic, scale and compass to map
+        mapView.showsCompass = true
+        mapView.showsScale = true
+        mapView.showsTraffic = true
 
         // Do any additional setup after loading the view.
         // Convert address to coordinate and annotate it on map
@@ -74,6 +78,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let leftIconView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: 53, height: 53))
         leftIconView.image = UIImage(named: restaurant.image)
         annotationView?.leftCalloutAccessoryView = leftIconView
+        // Change pin color
+        annotationView?.pinTintColor = UIColor.orange
         
         return annotationView
     }
