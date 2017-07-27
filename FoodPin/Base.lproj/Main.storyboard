@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" tableViewCell="4hp-xE-8ly" id="aWi-Zk-f9I">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleAspectFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U1p-IF-GLN">
@@ -118,6 +118,35 @@
             </objects>
             <point key="canvasLocation" x="-28" y="138.0809595202399"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="p9a-pb-b3i">
+            <objects>
+                <viewController id="TBd-xz-6og" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="At0-JD-fLQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="17a-GU-OpE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hmU-vk-YnT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fQh-D4-A5d">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fQh-D4-A5d" secondAttribute="trailing" id="Eh2-AN-FeM"/>
+                            <constraint firstItem="fQh-D4-A5d" firstAttribute="bottom" secondItem="17a-GU-OpE" secondAttribute="top" id="JAY-xO-Wyq"/>
+                            <constraint firstItem="fQh-D4-A5d" firstAttribute="top" secondItem="hmU-vk-YnT" secondAttribute="top" id="aVr-If-Ync"/>
+                            <constraint firstItem="fQh-D4-A5d" firstAttribute="leading" secondItem="hmU-vk-YnT" secondAttribute="leading" id="zvx-Cf-cUR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vf-5Z-jec" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728" y="921"/>
+        </scene>
         <!--Restaurant Detail View Controller-->
         <scene sceneID="M3o-Fx-X8p">
             <objects>
@@ -133,16 +162,20 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="36" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fvf-zb-F7u">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="P4T-l6-utN">
+                                <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="P4T-l6-utN">
                                     <rect key="frame" x="0.0" y="64" width="414" height="200"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
+                                <mapView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="Cxl-HI-bKN">
+                                    <rect key="frame" x="0.0" y="328" width="414" height="135"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </mapView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="lST-bp-PLk" customClass="RestaurantDetailTableViewCell" customModule="FoodPin" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="228" width="414" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lST-bp-PLk" id="5Nw-1b-xAQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAQ-yi-eiS">
@@ -208,8 +241,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="Cxl-HI-bKN" id="kxp-U4-j8U"/>
                         <outlet property="restaurantImageView" destination="P4T-l6-utN" id="xc7-po-smr"/>
                         <outlet property="tableView" destination="Fvf-zb-F7u" id="yvL-HJ-JuJ"/>
+                        <segue destination="TBd-xz-6og" kind="show" identifier="showMap" id="Zpe-9f-HYB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOx-HF-dey" userLabel="First Responder" sceneMemberID="firstResponder"/>

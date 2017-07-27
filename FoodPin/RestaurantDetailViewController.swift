@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class RestaurantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -15,6 +16,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     @IBOutlet var restaurantLocationView:UILabel!
     @IBOutlet var restaurantTypeView:UILabel!
     @IBOutlet var tableView:UITableView!
+    @IBOutlet var mapView: MKMapView!
     
 //    var restaurantImage = ""
 //    var restaurantName = ""
@@ -39,13 +41,19 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
 //        restaurantTypeView.text = restaurant.type
         
         tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
-        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        // clear table view footer
+//        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        
         tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 1)
         // enable self-sizing cells
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
 //        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "            AvenirNextCondensed-DemiBold", size: 17)!]
+        
+        //handle map
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showMap))
+        mapView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -110,6 +118,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         }
         
         tableView.reloadData()
+    }
+    
+    func showMap() {
+        performSegue(withIdentifier: "showMap", sender: self)
     }
     
 

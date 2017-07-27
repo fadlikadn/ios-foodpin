@@ -10,6 +10,7 @@
 		0158DD541F14751C00A535F3 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0158DD531F14751C00A535F3 /* RestaurantDetailViewController.swift */; };
 		0158DD561F14A3BB00A535F3 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0158DD551F14A3BB00A535F3 /* Restaurant.swift */; };
 		0158DD5A1F14D5D500A535F3 /* RestaurantDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0158DD591F14D5D500A535F3 /* RestaurantDetailTableViewCell.swift */; };
+		0169706E1F2976CE0069F408 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0169706D1F2976CE0069F408 /* MapKit.framework */; };
 		01791CEF1F131F3200DF9ED9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01791CEE1F131F3200DF9ED9 /* AppDelegate.swift */; };
 		01791CF41F131F3200DF9ED9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01791CF21F131F3200DF9ED9 /* Main.storyboard */; };
 		01791CF61F131F3200DF9ED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01791CF51F131F3200DF9ED9 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		0158DD531F14751C00A535F3 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		0158DD551F14A3BB00A535F3 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		0158DD591F14D5D500A535F3 /* RestaurantDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTableViewCell.swift; sourceTree = "<group>"; };
+		0169706D1F2976CE0069F408 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		01791CEB1F131F3200DF9ED9 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01791CEE1F131F3200DF9ED9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01791CF31F131F3200DF9ED9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,17 +41,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0169706E1F2976CE0069F408 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0169706C1F2976CE0069F408 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0169706D1F2976CE0069F408 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		01791CE21F131F3200DF9ED9 = {
 			isa = PBXGroup;
 			children = (
 				01791CED1F131F3200DF9ED9 /* FoodPin */,
 				01791CEC1F131F3200DF9ED9 /* Products */,
+				0169706C1F2976CE0069F408 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +125,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 62PYG5KRDL;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
