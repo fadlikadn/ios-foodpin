@@ -17,6 +17,7 @@
 		01791CF91F131F3200DF9ED9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01791CF71F131F3200DF9ED9 /* LaunchScreen.storyboard */; };
 		01791D011F13207C00DF9ED9 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01791D001F13207C00DF9ED9 /* RestaurantTableViewController.swift */; };
 		01791D031F1326EC00DF9ED9 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01791D021F1326EC00DF9ED9 /* RestaurantTableViewCell.swift */; };
+		018CF05D1F29915900B96F1D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018CF05C1F29915900B96F1D /* MapViewController.swift */; };
 		0193276B1F28447D00E1F1FF /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0193276A1F28447D00E1F1FF /* ReviewViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		01791CFA1F131F3200DF9ED9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01791D001F13207C00DF9ED9 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		01791D021F1326EC00DF9ED9 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		018CF05C1F29915900B96F1D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0193276A1F28447D00E1F1FF /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 				0193276A1F28447D00E1F1FF /* ReviewViewController.swift */,
 				0158DD591F14D5D500A535F3 /* RestaurantDetailTableViewCell.swift */,
 				0158DD551F14A3BB00A535F3 /* Restaurant.swift */,
+				018CF05C1F29915900B96F1D /* MapViewController.swift */,
 				01791CF21F131F3200DF9ED9 /* Main.storyboard */,
 				01791CF51F131F3200DF9ED9 /* Assets.xcassets */,
 				01791CF71F131F3200DF9ED9 /* LaunchScreen.storyboard */,
@@ -176,6 +179,7 @@
 				0158DD5A1F14D5D500A535F3 /* RestaurantDetailTableViewCell.swift in Sources */,
 				0158DD541F14751C00A535F3 /* RestaurantDetailViewController.swift in Sources */,
 				01791CEF1F131F3200DF9ED9 /* AppDelegate.swift in Sources */,
+				018CF05D1F29915900B96F1D /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
