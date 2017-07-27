@@ -301,5 +301,10 @@ class RestaurantTableViewController: UITableViewController {
             }
         }
     }
+    
+    // Following unwind action
+    @IBAction func unwindToHomeScreen(segue:UIStoryboardSegue) {
+        
+    }
 
 }
