@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01479A921F2AD2AB0093A633 /* AddRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01479A911F2AD2AB0093A633 /* AddRestaurantController.swift */; };
 		0158DD541F14751C00A535F3 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0158DD531F14751C00A535F3 /* RestaurantDetailViewController.swift */; };
 		0158DD561F14A3BB00A535F3 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0158DD551F14A3BB00A535F3 /* Restaurant.swift */; };
 		0158DD5A1F14D5D500A535F3 /* RestaurantDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0158DD591F14D5D500A535F3 /* RestaurantDetailTableViewCell.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01479A911F2AD2AB0093A633 /* AddRestaurantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestaurantController.swift; sourceTree = "<group>"; };
 		0158DD531F14751C00A535F3 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		0158DD551F14A3BB00A535F3 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		0158DD591F14D5D500A535F3 /* RestaurantDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				0158DD591F14D5D500A535F3 /* RestaurantDetailTableViewCell.swift */,
 				0158DD551F14A3BB00A535F3 /* Restaurant.swift */,
 				018CF05C1F29915900B96F1D /* MapViewController.swift */,
+				01479A911F2AD2AB0093A633 /* AddRestaurantController.swift */,
 				01791CF21F131F3200DF9ED9 /* Main.storyboard */,
 				01791CF51F131F3200DF9ED9 /* Assets.xcassets */,
 				01791CF71F131F3200DF9ED9 /* LaunchScreen.storyboard */,
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01479A921F2AD2AB0093A633 /* AddRestaurantController.swift in Sources */,
 				0158DD561F14A3BB00A535F3 /* Restaurant.swift in Sources */,
 				01791D011F13207C00DF9ED9 /* RestaurantTableViewController.swift in Sources */,
 				0193276B1F28447D00E1F1FF /* ReviewViewController.swift in Sources */,
